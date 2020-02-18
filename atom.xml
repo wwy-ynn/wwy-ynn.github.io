@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwy-ynn.github.io</id>
     <title>Gridea</title>
-    <updated>2020-02-18T00:52:02.852Z</updated>
+    <updated>2020-02-18T01:25:10.725Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwy-ynn.github.io"/>
     <link rel="self" href="https://wwy-ynn.github.io/atom.xml"/>
@@ -10,6 +10,90 @@
     <logo>https://wwy-ynn.github.io/images/avatar.png</logo>
     <icon>https://wwy-ynn.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Python下载文件以及进度条]]></title>
+        <id>https://wwy-ynn.github.io/post/python-xia-zai-wen-jian-yi-ji-jin-du-tiao/</id>
+        <link href="https://wwy-ynn.github.io/post/python-xia-zai-wen-jian-yi-ji-jin-du-tiao/">
+        </link>
+        <updated>2020-02-18T01:08:40.000Z</updated>
+        <content type="html"><![CDATA[<p>前段时间一直在用python tk写GUI，遇到一个问题，下载文件怎么去做进度条<br>
+直接上代码</p>
+<pre><code class="language-python">import os;
+from tkinter import *
+from tkinter import filedialog, ttk
+import time
+import urllib.request
+import tkinter.font as tf
+import _thread
+def downloading():
+	fff=open('C:\\wyn2\\Path.ini','r')
+
+	path=fff.readline()
+
+	fff.close()
+	ff=open('C:\\wyn2\\Version.txt')
+	url=ff.readlines()[1]
+	if (os.path.exists(path)):
+		os.remove(path)
+	file=open(path,'wb')
+	i=0
+	file_Cloud=urllib.request.urlopen(url)
+	while True:
+		if(i/100&gt;100):
+			Lb['text']=&quot;正在下载...  99.99%&quot;
+		else:
+			Lb['text']=&quot;正在下载...  %.2f%%&quot; % (i/100)
+		data=file_Cloud.read(13100)
+		if(not data):
+			Lb['text']='下载完成,重新打开安装器即可使用'
+			break
+		i+=1
+		file.write(data)
+		mpb[&quot;value&quot;] = i
+		root.update()
+		i+=1
+root = Tk()
+ft=tf.Font(family='华文正楷',size=14,weight=tf.BOLD,slant=tf.ITALIC)
+Lb2=Label(root,font=ft,justify=LEFT,text='', fg='red')
+def download_change():
+	urll=&quot;https://link.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3QvcyFBa0h0U1NHTWRISktqd1gtdG9sLVo2V3c0WjZyP2U9cU9DWGdM.txt&quot;
+	downPath='C:\\wyn2\\Changelog.txt'
+	urllib.request.urlretrieve(urll,downPath)
+	f=open('C:\\wyn2\\Changelog.txt','rb')
+	Lb2['text']=f.read().decode('utf-8')
+	print(Lb2['text'])
+	f.close()
+
+# _thread.start_new_thread(download_change,())
+root.resizable(width=False, height=False)
+
+# print(url)
+
+root.wm_attributes('-topmost', 1)
+root.title('正在更新')
+root.geometry('600x400+450+200')
+mpb = ttk.Progressbar(root, orient=&quot;horizontal&quot;, length=500, mode=&quot;determinate&quot;)
+mpb.place(x=60,y=100)
+mpb[&quot;maximum&quot;] = 10000
+mpb[&quot;value&quot;] = 0
+Lb=Label(root,font=('华文琥珀',30,'bold'), text='正在下载...', fg='red')
+Lb.place(x=130,y=150)
+
+Lb2.place(x=50,y=200)
+root.iconbitmap('C:\\wyn2\\Wardens.ico')
+
+_thread.start_new_thread(downloading,())
+# sys.exit()
+root.mainloop()
+</code></pre>
+<p>进度条是看一个大佬上传文件才学会的<br>
+https://blog.csdn.net/Speechless_/article/details/84941810<br>
+还有一个是创建了一个新的线程，否则拖动会停止下载<br>
+效果图：<br>
+<img src="https://wwy-ynn.github.io/post-images/1581989049797.png" alt="" loading="lazy"><br>
+底下还能显示一些文字</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://wwy-ynn.github.io/post/hello-gridea/</id>
