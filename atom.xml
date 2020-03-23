@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wwy-ynn.github.io</id>
     <title>Gridea</title>
-    <updated>2020-02-18T01:25:33.637Z</updated>
+    <updated>2020-03-23T00:57:26.945Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wwy-ynn.github.io"/>
     <link rel="self" href="https://wwy-ynn.github.io/atom.xml"/>
@@ -10,6 +10,30 @@
     <logo>https://wwy-ynn.github.io/images/avatar.png</logo>
     <icon>https://wwy-ynn.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[凯瑞尔牛逼]]></title>
+        <id>https://wwy-ynn.github.io/post/kai-rui-er-niu-bi/</id>
+        <link href="https://wwy-ynn.github.io/post/kai-rui-er-niu-bi/">
+        </link>
+        <updated>2020-03-23T00:49:01.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="凯瑞尔牛逼">凯瑞尔牛逼</h1>
+<p>开始第一个程序</p>
+<pre><code class="language-python">print('Hello World!')
+</code></pre>
+<p>没错，这就是著名的Hello World!<br>
+观察一下特点：python一行写完不需要;(可以打分号分开在一行中的两句话)</p>
+<p>第二个程序</p>
+<pre><code class="language-python">x=input()
+a=x.split(' ')[0]
+b=x.split(' ')[1]
+print(int(a)+int(b))
+</code></pre>
+<p>没错，这就是著名的A+B Problem<br>
+input()是直接读取一行,可以添加提示语,如：</p>
+<pre><code>input('请输入两个数:')
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python下载文件以及进度条]]></title>
         <id>https://wwy-ynn.github.io/post/python-xia-zai-wen-jian-yi-ji-jin-du-tiao/</id>

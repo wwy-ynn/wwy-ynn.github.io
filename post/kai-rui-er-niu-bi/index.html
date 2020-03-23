@@ -2,21 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Python下载文件以及进度条 | Gridea</title>
+<title>凯瑞尔牛逼 | Gridea</title>
 <link rel="shortcut icon" href="https://wwy-ynn.github.io/favicon.ico?v=1584924998237">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wwy-ynn.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Python下载文件以及进度条 | Gridea - Atom Feed" href="https://wwy-ynn.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="凯瑞尔牛逼 | Gridea - Atom Feed" href="https://wwy-ynn.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="前段时间一直在用python tk写GUI，遇到一个问题，下载文件怎么去做进度条
-直接上代码
-import os;
-from tkinter import *
-from tkinter import filedialog, ttk
-impo..." />
+    <meta name="description" content="凯瑞尔牛逼
+开始第一个程序
+print('Hello World!')
+
+没错，这就是著名的Hello World!
+观察一下特点：python一行写完不需要;(可以打分号分开在一行中的两句话)
+第二个程序
+x=input()
+a=x.sp..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -79,100 +82,43 @@ impo..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Python下载文件以及进度条
+              凯瑞尔牛逼
             </h2>
             <div class="post-info">
               <span>
-                2020-02-18
+                2020-03-23
               </span>
               <span>
-                3 min read
+                1 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>前段时间一直在用python tk写GUI，遇到一个问题，下载文件怎么去做进度条<br>
-直接上代码</p>
-<pre><code class="language-python">import os;
-from tkinter import *
-from tkinter import filedialog, ttk
-import time
-import urllib.request
-import tkinter.font as tf
-import _thread
-def downloading():
-	fff=open('C:\\wyn2\\Path.ini','r')
-
-	path=fff.readline()
-
-	fff.close()
-	ff=open('C:\\wyn2\\Version.txt')
-	url=ff.readlines()[1]
-	if (os.path.exists(path)):
-		os.remove(path)
-	file=open(path,'wb')
-	i=0
-	file_Cloud=urllib.request.urlopen(url)
-	while True:
-		if(i/100&gt;100):
-			Lb['text']=&quot;正在下载...  99.99%&quot;
-		else:
-			Lb['text']=&quot;正在下载...  %.2f%%&quot; % (i/100)
-		data=file_Cloud.read(13100)
-		if(not data):
-			Lb['text']='下载完成,重新打开安装器即可使用'
-			break
-		i+=1
-		file.write(data)
-		mpb[&quot;value&quot;] = i
-		root.update()
-		i+=1
-root = Tk()
-ft=tf.Font(family='华文正楷',size=14,weight=tf.BOLD,slant=tf.ITALIC)
-Lb2=Label(root,font=ft,justify=LEFT,text='', fg='red')
-def download_change():
-	urll=&quot;https://link.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3QvcyFBa0h0U1NHTWRISktqd1gtdG9sLVo2V3c0WjZyP2U9cU9DWGdM.txt&quot;
-	downPath='C:\\wyn2\\Changelog.txt'
-	urllib.request.urlretrieve(urll,downPath)
-	f=open('C:\\wyn2\\Changelog.txt','rb')
-	Lb2['text']=f.read().decode('utf-8')
-	print(Lb2['text'])
-	f.close()
-
-# _thread.start_new_thread(download_change,())
-root.resizable(width=False, height=False)
-
-# print(url)
-
-root.wm_attributes('-topmost', 1)
-root.title('正在更新')
-root.geometry('600x400+450+200')
-mpb = ttk.Progressbar(root, orient=&quot;horizontal&quot;, length=500, mode=&quot;determinate&quot;)
-mpb.place(x=60,y=100)
-mpb[&quot;maximum&quot;] = 10000
-mpb[&quot;value&quot;] = 0
-Lb=Label(root,font=('华文琥珀',30,'bold'), text='正在下载...', fg='red')
-Lb.place(x=130,y=150)
-
-Lb2.place(x=50,y=200)
-root.iconbitmap('C:\\wyn2\\Wardens.ico')
-
-_thread.start_new_thread(downloading,())
-# sys.exit()
-root.mainloop()
+                <h1 id="凯瑞尔牛逼">凯瑞尔牛逼</h1>
+<p>开始第一个程序</p>
+<pre><code class="language-python">print('Hello World!')
 </code></pre>
-<p>进度条是看一个大佬上传文件才学会的<br>
-https://blog.csdn.net/Speechless_/article/details/84941810<br>
-还有一个是创建了一个新的线程，否则拖动会停止下载<br>
-效果图：<br>
-<img src="https://wwy-ynn.github.io/post-images/1581989049797.png" alt="" loading="lazy"><br>
-底下还能显示一些文字</p>
+<p>没错，这就是著名的Hello World!<br>
+观察一下特点：python一行写完不需要;(可以打分号分开在一行中的两句话)</p>
+<p>第二个程序</p>
+<pre><code class="language-python">x=input()
+a=x.split(' ')[0]
+b=x.split(' ')[1]
+print(int(a)+int(b))
+</code></pre>
+<p>没错，这就是著名的A+B Problem<br>
+input()是直接读取一行,可以添加提示语,如：</p>
+<pre><code>input('请输入两个数:')
+</code></pre>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li><a href="#%E5%87%AF%E7%91%9E%E5%B0%94%E7%89%9B%E9%80%BC">凯瑞尔牛逼</a></li>
+</ul>
+
               </div>
             </div>
           </article>
@@ -181,9 +127,9 @@ https://blog.csdn.net/Speechless_/article/details/84941810<br>
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://wwy-ynn.github.io/post/hello-gridea/">
+            <a href="https://wwy-ynn.github.io/post/python-xia-zai-wen-jian-yi-ji-jin-du-tiao/">
               <h3 class="post-title">
-                Hello Gridea
+                Python下载文件以及进度条
               </h3>
             </a>
           </div>
